@@ -47,7 +47,7 @@ git clone https://github.com/yourusername/my-book-viz.git
 Navigate to the directory:
 
 Bash
-cd book-data-visualiser
+cd my-book-viz
 Install dependencies:
 
 Bash
