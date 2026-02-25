@@ -14,7 +14,7 @@ Responsive Design: Fully optimised for desktop and tablet viewing using CSS3 Fle
 
 Data Integrity: Utilises ESLint configuration to maintain high code quality, consistent formatting, and to catch plug-in errors during development.
 
-🛠️ Tech Stack
+Tech Stack
 Frontend: React.js
 
 Styling: CSS3
@@ -33,7 +33,7 @@ Dataset Link: https://www.kaggle.com/datasets/bahramjannesarr/goodreads-book-dat
 
 Processing: The raw data was cleaned and parsed using JavaScript to ensure compatibility with React's state management.
 
-⚙️ Getting Started
+Getting Started
 Prerequisites
 Node.js (v18.0.0 or higher)
 
