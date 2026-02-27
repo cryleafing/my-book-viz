@@ -1,6 +1,4 @@
-import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import bestsellers from '../data/bestsellers.json';
 
 const getAuthorData = (data) => {
     const authorCounts = {};
@@ -14,17 +12,19 @@ const getAuthorData = (data) => {
                      count: authorCounts[author]
                  }))
                  .sort((a, b) => b.count - a.count)
-                 .slice(0, 10); // Show top 10 authors
+                 .slice(0, 10); 
 };
 
-const AuthorChart = () => {
-    const data = getAuthorData(bestsellers);
+// destructure 'data' from the props passed by App.js
+const AuthorChart = ({ data }) => {
+    // run the helper on the NEW data every time the component re-renders
+    const chartData = getAuthorData(data);
 
     return (
         <div style={{ width: '100%', height: 400 }}>
             <ResponsiveContainer>
                 <BarChart
-                    data={data}
+                    data={chartData}
                     margin={{
                         top: 5, right: 30, left: 20, bottom: 5,
                     }}
@@ -33,7 +33,7 @@ const AuthorChart = () => {
                     <XAxis dataKey="author" />
                     <YAxis />
                     <Tooltip />
-                    <Bar dataKey="count" fill="#8884d8" />
+                    <Bar dataKey="count" fill="#4f46e5" />
                 </BarChart>
             </ResponsiveContainer>
         </div>
